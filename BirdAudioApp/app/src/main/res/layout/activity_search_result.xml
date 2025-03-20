@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchResultActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/search_back_tool"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:titleTextColor="@color/white"
+        app:title="返回"
+        android:background="@drawable/back_top_style"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitCenter" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <!-- 显示名称 -->
+        <TextView
+            android:id="@+id/chineseTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="名称"
+            android:textSize="18sp"
+            android:textColor="@color/my_light_primary"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 显示学名 -->
+        <TextView
+            android:id="@+id/protonymTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="学名"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 显示中文名称 -->
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="英文名"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 显示地理分布 -->
+        <TextView
+            android:id="@+id/geoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="地理分布"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- 显示介绍 -->
+        <TextView
+            android:id="@+id/introduceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="介绍"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

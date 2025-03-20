@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppInfoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/info_back_tool"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:titleTextColor="@color/white"
+        app:title="返回主页"
+        android:background="@drawable/back_top_style"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/bird_app_logo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BirdSeeker v1.0.0"
+            android:textSize="14sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="                            BirdSeeker——智能鸟类识别助手
+        \nBirdSeeker是一款功能强大的鸟类识别应用，专为鸟类爱好者、自然探索者和科研人员打造。无论是森林、公园还是自家后院，只需录制鸟鸣声，BirdSeeker 即可快速识别鸟类，提供详细的百科信息，让您轻松了解它们的生活习性、栖息地和生态特征。
+\n\n
+\n🔍 智能识别：通过AI算法分析鸟鸣声，精准匹配对应鸟种。
+\n📖 鸟类百科：提供丰富的鸟类知识，包括图片、习性、分布区域等。
+\n🔎 快速搜索：支持对鸟类进行搜索，帮助您更快找到目标鸟种。
+\n📌 观察记录：可保存识别记录，创建个性化的观鸟日志，分享您的发现。
+\n🌍 全球覆盖：支持多种鸟类数据库，无论身处何地，都能轻松识别当地鸟类。
+
+\n在BirdSeeker，探索自然，发现鸟鸣背后的故事！ 🐦🎶"/>
+
+
+  </androidx.appcompat.widget.LinearLayoutCompat>

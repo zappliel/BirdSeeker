@@ -1,0 +1,5 @@
+*.ogg
+*.zip
+*.so
+BirdAudioApp/app/libs/
+.idea/

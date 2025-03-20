@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.DailyFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_search_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/daily_search_view"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:iconifiedByDefault="false"
+                android:queryHint="请输入搜索内容"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/img_bird_top_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginRight="35dp"
+                android:fontFamily="@font/rye_regular"
+                android:text="   Birds\nSeeker"
+                android:textColor="@color/my_light_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/daily_bird_logo"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitCenter"
+        android:clipToOutline="true"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <!-- 显示名称 -->
+        <TextView
+            android:id="@+id/chineseTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="名称"
+            android:textSize="18sp"
+            android:textColor="@color/my_light_primary"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 显示学名 -->
+        <TextView
+            android:id="@+id/protonymTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="学名"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 显示中文名称 -->
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="英文名"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- 显示地理分布 -->
+        <TextView
+            android:id="@+id/geoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="地理分布"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- 显示介绍 -->
+        <TextView
+            android:id="@+id/introduceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="介绍"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/find"
+        android:title="发现鸟类"
+        android:icon="@drawable/find_logo"/>
+
+    <item android:id="@+id/daily"
+        android:title="每日幸运鸟"
+        android:icon="@drawable/bird_daily_logo"/>
+
+    <item android:id="@+id/audio"
+        android:title="音频识别"
+        android:icon="@drawable/audio_logo"/>
+
+    <item android:id="@+id/map"
+        android:title="观测地图"
+        android:icon="@drawable/map_watch_logo"/>
+
+    <item android:id="@+id/home"
+        android:title="个人主页"
+        android:icon="@drawable/home_logo"/>
+</menu>
