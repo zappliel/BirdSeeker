@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.chenpu.backend.utils.crawer;
 import com.chenpu.backend.utils.KeyWordCrawer;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -59,8 +60,11 @@ public class BirdServiceImpl implements BirdService {
     @Override
     public Infer inferBird() {
         try {
+            // 设定Python脚本的工作目录
+            File workingDirectory = new File("D:/BirdWork/Model/AudioClassification-Pytorch");
+
             // Python 解释器路径（如 Python3，请改为 "python3"）
-            String pythonInterpreter = "python";
+            String pythonInterpreter = "D:/anaconda3/python.exe";
 
             // Python 脚本路径
             String scriptPath = "D:/BirdWork/Model/AudioClassification-Pytorch/infer.py"; // 替换为你的 infer.py 绝对路径
@@ -72,6 +76,8 @@ public class BirdServiceImpl implements BirdService {
             ProcessBuilder processBuilder = new ProcessBuilder(
                     pythonInterpreter, scriptPath, "--audio_path=" + audioPath
             );
+            processBuilder.directory(workingDirectory);
+            processBuilder.redirectErrorStream(true);
 
             // 启动进程
             Process process = processBuilder.start();
@@ -81,6 +87,8 @@ public class BirdServiceImpl implements BirdService {
             String outputLine;
             String label = null;
             double score = 0.0;
+
+            System.out.println("Python thread starts");
 
             while ((outputLine = reader.readLine()) != null) {
                 System.out.println("Python Output: " + outputLine);
@@ -93,13 +101,6 @@ public class BirdServiceImpl implements BirdService {
                         score = Double.parseDouble(parts[2].trim());
                     }
                 }
-            }
-
-            // 读取错误输出
-            BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
-            String errorLine;
-            while ((errorLine = errorReader.readLine()) != null) {
-                System.err.println("Python Error: " + errorLine);
             }
 
             // 等待 Python 进程执行完毕
